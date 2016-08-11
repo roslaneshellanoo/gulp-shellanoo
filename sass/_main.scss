@@ -1,0 +1,100 @@
+
+.intro-title {
+  font-weight: 100;
+  font-size: 2.36859em;
+  letter-spacing: 4px;
+  .wf-active & {
+
+  }
+
+  @include mq(md) {
+    font-size: 3.15733em;
+  }
+}
+
+.intro-section {
+  padding: 10px;
+  background: #85c637;
+  background-image: linear-gradient(to left, #5d5d5d 0%, #000000 100%);
+
+  .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+  }
+
+  @include mq(md) {
+    padding: 40px 35px;
+
+    .container {
+      max-width: mq-get-breakpoint-width(lg) - ($grid-gutter * 2);
+      padding: 40px;
+    }
+
+    p {
+      font-size: 1.125em;
+    }
+  }
+}
+
+.container .section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 0.2em solid #efefef;
+
+  &:first-child {
+    margin-top: 0;
+    border-top: 0;
+  }
+
+  @include mq(sm) {
+    margin-top: 40px;
+    padding-top: 40px;
+  }
+}
+
+#grid .col {
+  margin-bottom: 30px;
+
+  > span {
+    display: block;
+    padding: 1em;
+    background: #efefef;
+  }
+}
+
+.btn-outline {
+  border-color: $button-bg;
+  background-color: transparent;
+  color: $button-bg;
+
+  &:hover, &:focus {
+    border-color: $button-hover-bg;
+    background-color: $button-hover-bg;
+  }
+}
+
+
+.btn-outline-white {
+  border-color: white;
+  background-color: transparent;
+  color: white;
+
+  &:hover, &:focus {
+    border-color: white;
+    background-color: white;
+    color: black;
+  }
+}
+
+.form-group > .btn {
+  margin-bottom: 0.2em;
+}
+
+.btn-group {
+  margin-bottom: 0;
+}
+
+.media p {
+  margin-bottom: 0;
+}
