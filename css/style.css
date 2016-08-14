@@ -646,9 +646,9 @@ ul, ol { padding-left: 2.5em; }
 
 .header { background: black; }
 .header .logo img { max-width: 30px; }
-.header .navigation ul li a { padding: 2rem; color: #fff; text-transform: uppercase; font-weight: 100; letter-spacing: 3px; font-size: 12px; }
+.header .navigation ul li a { padding: 2rem; color: #fff; text-transform: uppercase; font-weight: 300; letter-spacing: 3px; font-size: 12px; }
 
-.intro-title, .logo { font-weight: 100; font-size: 2.36859em; letter-spacing: 4px; }
+.intro-title, .logo { letter-spacing: 4px; }
 @media (min-width: 62em) { .intro-title, .logo { font-size: 3.15733em; } }
 
 .intro-section { background: #000000; background-image: -webkit-linear-gradient(right, #5d5d5d 0%, #000000 100%); background-image: linear-gradient(to left, #5d5d5d 0%, #000000 100%); padding: 3em 0; }
