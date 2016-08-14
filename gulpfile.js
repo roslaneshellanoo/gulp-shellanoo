@@ -5,12 +5,14 @@ var autoprefixer = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
+var stripCssComments = require('gulp-strip-css-comments');
+
 
 
 // Sass
 gulp.task('sass', function(){
  return sass('./sass/style.scss', { sourcemap: true, style: 'compact'})
-
+     //.pipe(stripCssComments())
      .pipe(autoprefixer())
      .pipe(sourcemaps.write('.'))
      .pipe(gulp.dest('./css'))
