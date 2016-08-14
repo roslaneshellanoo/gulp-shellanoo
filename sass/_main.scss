@@ -19,12 +19,13 @@
 {
 
   letter-spacing: 4px;
+  padding: 12px 0;
   .wf-active & {
 
   }
 
   @include mq(md) {
-    font-size: 3.15733em;
+
   }
 }
 
