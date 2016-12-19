@@ -5,7 +5,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var minifycss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
-var stripCssComments = require('gulp-strip-css-comments');
+var fileinclude = require('gulp-file-include');
 
 
 
@@ -35,10 +35,20 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('./js/'));
 });
 
+
+gulp.task('fileinclude', function() {
+    gulp.src(['./pages/index.html'])
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(gulp.dest('./'));
+});
+
 // Sass
 gulp.task('watch', function(){
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./js/*.js', ['scripts']);
 });
 
-gulp.task('default', ['sass', 'scripts', 'watch']);
+gulp.task('default', ['sass', 'scripts','fileinclude', 'watch']);
